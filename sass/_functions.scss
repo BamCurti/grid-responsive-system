@@ -1,0 +1,4 @@
+@function getSize($size) {
+    //This function returns the percentage of the size of the grid item
+    @return percentage(calc($size / 12));
+}

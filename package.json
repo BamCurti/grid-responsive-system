@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "sass": "^1.49.4"
+  },
+  "name": "grid-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "styles": "sass sass/styles.scss:styles.css --no-source-map",
+    "styles:watch": "sass sass/styles.scss:styles.css --no-source-map --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,31 @@
+@import '_mixin';
+@import '_vars';
+
+.grid {
+    width: 100%;
+
+    > .grid-item {
+        @include item-response;
+
+        &.grid-item {
+            @include responsive-sizing('sm');
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-min-size) {
+    //adding the label md to tablet response
+    .grid > .grid-item {
+            &.grid-item {
+                @include responsive-sizing('md');
+            }
+        }
+}
+
+@media screen and (min-width: $computer-min-size) {
+    .grid > .grid-item {
+            &.grid-item {
+                @include responsive-sizing('lg');
+            }
+        }
+}

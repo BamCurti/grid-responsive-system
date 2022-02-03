@@ -1,0 +1,23 @@
+@import '_functions';
+
+@mixin item-response {
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+}
+
+@mixin sizing($size) {
+    //with this mixin we can interact every posible sizing, adding the postfix of the size
+        &-#{$size} {
+            width: getSize($size);
+        }
+    }
+    
+    @mixin responsive-sizing($label) {
+        //with this mixin we can just pass the label of the size (sm, md, lg), and get the 12 sizing classes
+        &-#{$label} {
+            @for $i from 1 to 13 {
+                @include sizing($i);
+            }
+        }
+    }
